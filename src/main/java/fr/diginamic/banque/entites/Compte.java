@@ -25,4 +25,16 @@ public class Compte {
 			this.soldeCompte = soldeCompte;
 		}
 
+			
+		/**
+		 *Redéfinition de la methode toString() de java.lang
+		 *Permet de retourner les information plutot que l'adresse de l'objet.
+		 */
+		@Override
+		
+		public String toString()
+		{
+			String information = "Numero du compte: " +numeroCompte +" Solde: "+ soldeCompte;
+			return information;
+		}
 }
