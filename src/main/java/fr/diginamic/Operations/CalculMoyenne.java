@@ -17,7 +17,6 @@ public class CalculMoyenne
 	 * 
 	 */
 	
-	
 	public CalculMoyenne(){
 		tabCalcul = new double[0];
 		
@@ -28,7 +27,6 @@ public class CalculMoyenne
 	 * de la taille du tableau
 	 * @param nouvelleValeur
 	 */
-	
 	
 	public void ajout(double nouvelleValeur) 
 	{
@@ -44,7 +42,6 @@ public class CalculMoyenne
 	 * @return double
 	 */
 	
-	
 	public double Calcul ()
 	{
 		double moyenneTableau = 0;
@@ -55,9 +52,11 @@ public class CalculMoyenne
 		return moyenneTableau / tabCalcul.length;
 	}
 	
+	
 	/**
 	 *Redéfinition de la méthode toString pour affiché directement la moyenne du tableau
 	 */
+	
 	@Override
 	public String toString() {
 		return "La moyenne du tableau" + Arrays.toString(tabCalcul) + "est égale a : " + Calcul();
