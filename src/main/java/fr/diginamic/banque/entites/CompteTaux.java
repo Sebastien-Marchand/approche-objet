@@ -9,7 +9,7 @@ public class CompteTaux extends Compte{
 	 * @param numeroCompte
 	 * @param soldeCompte
 	 */
-	public CompteTaux(int numeroCompte, int soldeCompte, float tauxRemuneration)
+	public CompteTaux(int numeroCompte, double soldeCompte, float tauxRemuneration)
 	{
 		super(numeroCompte, soldeCompte);
 		this.tauxRemuneration = tauxRemuneration;

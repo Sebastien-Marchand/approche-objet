@@ -10,7 +10,7 @@ package fr.diginamic.banque.entites;
 public class Compte {
 
 		int numeroCompte = 0;
-		int soldeCompte = 0;
+		double soldeCompte = 0;
 		
 
 		/**
@@ -19,7 +19,7 @@ public class Compte {
 		 * @param numeroCompte
 		 * @param soldeCompte
 		 */
-		public Compte(int numeroCompte, int soldeCompte)
+		public Compte(int numeroCompte, double soldeCompte)
 		{
 			this.numeroCompte = numeroCompte;
 			this.soldeCompte = soldeCompte;
