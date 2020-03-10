@@ -11,7 +11,7 @@ public class TestListeString {
 
 		String villePlusGrand = "";
 		
-		for(int i = 0; i < maListe.size() ; i++)
+		for(int i = 0; i < maListe.size() ; i++)															//Affiche la ville avec le plus de lettre
 		{
 			if (maListe.get(i).length() > villePlusGrand.length())
 			{
@@ -24,7 +24,7 @@ public class TestListeString {
 		
 		AfficherVille(maListe);
 		
-		for(int i = 0; i < maListe.size() ; i++)
+		for(int i = 0; i < maListe.size() ; i++)															//supprime de la liste les ville qui commence par N
 		{
 			if ( maListe.get(i).charAt(0) == 'N')
 			{

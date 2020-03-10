@@ -23,13 +23,61 @@ public class Ville {
 		maListe.add(new Ville("Marseille",850700));
 		maListe.add(new Ville("Tarbs",40600));
 
-		int HabitantHigh = 0;
-		String HabitantHighString = "";
-		for( int i = 0 ; i < maListe.size() ; i++)
+		Ville villePlusPeuple = null;
+		for( int i = 0 ; i < maListe.size() ; i++)											//recherche la ville la plus peuplé
 		{
-					//System.out.println(Integer.parseInt(maListe.get(i).substring(maListe.get(i).indexOf(",")+1, maListe.get(i).indexOf("h", maListe.get(i).indexOf(",")))));
+			if(villePlusPeuple == null )
+			{
+				villePlusPeuple = maListe.get(i);
+			}
+			else
+			{
+				if(maListe.get(i).habitant > villePlusPeuple.habitant)
+				{
+					villePlusPeuple = maListe.get(i);
+				}
+			}
 		}
-
+		System.out.println("La ville la plus peuplé est :" + villePlusPeuple.ville
+				+ " avec " + villePlusPeuple.habitant + " Habitants");
+		
+		Ville villeMoinPeuple = null;														//Recherche la ville la moins peuplé
+		for(Ville laVille : maListe)
+		{
+			if(villeMoinPeuple == null )
+			{
+				villeMoinPeuple = laVille;
+			}
+			else
+			{
+				if(laVille.habitant < villeMoinPeuple.habitant)
+				{
+					villeMoinPeuple = laVille;
+				}
+			}
+		}
+		System.out.println("La ville la moins peuplé est :" + villeMoinPeuple.ville
+				+ " avec " + villeMoinPeuple.habitant + " Habitants");
+		
+		
+		if(maListe.remove(villeMoinPeuple))											//supprime de la liste la ville la moins peuplé
+		{
+			System.out.println("Suppresion de la ville réussie");
+		}
+		
+		for( int i = 0 ; i < maListe.size() ; i++)									//convertie en majuscule la ville avec plus de 100 000 habitants
+		{
+			if(maListe.get(i).habitant > 100000)
+			{
+				maListe.get(i).ville = maListe.get(i).ville.toUpperCase();
+			}
+		}
+		
+		for( int i = 0 ; i < maListe.size() ; i++)									//affiche la liste final des villes
+		{
+			System.out.println("La ville : " + maListe.get(i).ville + " détiens "+ maListe.get(i).habitant);
+		}
+		
 	}
 
 }
