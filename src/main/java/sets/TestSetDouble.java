@@ -9,7 +9,12 @@ public class TestSetDouble {
 	public static void main(String[] args) {
 
 		HashSet<Double> set = new HashSet<>(Arrays.asList(1.5, 8.25, -7.32, 13.3, -12.45, 48.5, 0.01));
+									//---------------Afficher toute les valeurs---------------//
+		Affichage(set);
+
+		
 									//---------------Trouver valeur maximum---------------//
+		
 		double valMax = Double.MIN_VALUE;
 		for(Double e : set)
 		{
@@ -32,8 +37,11 @@ public class TestSetDouble {
 			}
 		}
 		System.out.println("Valeur min :" + valMin);
+		set.remove(valMin);
 		
+		/*
 								//---------------Supprimer valeur minimum---------------//
+		
 		Iterator monIT = set.iterator();
 		while(monIT.hasNext())
 		{
@@ -46,6 +54,7 @@ public class TestSetDouble {
 			}
 		}
 		System.out.println("liste Valeur après suppression : ");
+		*/
 		
 		Affichage(set);
 	}
