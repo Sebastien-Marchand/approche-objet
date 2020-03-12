@@ -46,4 +46,14 @@ public class Pays implements Comparable<Pays>{
 		return result;
 	}
 	
+	@Override
+	public boolean equals(Object object)
+	{
+		if(!(object instanceof Pays))
+		{
+			return false;
+		}
+		Pays other = (Pays) object;
+		return this.nom.equals(other.getNom());
+	}
 }

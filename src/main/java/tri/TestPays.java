@@ -50,7 +50,13 @@ public class TestPays {
 			System.out.println(monPays.getNom() + " PIB : " + monPays.getNbHabitant());
 		}
 		
+		Pays pays1 = new Pays("USA" , 327.2 , 57638d);
+		Pays pays2 = new Pays("France" , 66.99 , 43551d);
+		Pays pays3 = new Pays("France" , 66.99 , 43551d);
 		
+		System.out.println("Pays1 est-il égal de pays2 ? rep :" + pays1.equals(pays2));
+		System.out.println("Pays2 est-il égal de pays3 ? rep :" + pays2.equals(pays3));
+
 	}
 
 }
